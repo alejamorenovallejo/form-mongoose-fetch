@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Formulario de Registro Jquery &amp; Mongoose
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/stylesheets/style.css')
+.container
+  .col-sm-6.col-sm-offset-3
+    h1 Formulario de Registro
+    form#register 
+      .form-group
+        label.control-label(for='user-github') Usuario Github:
+        input#user-github.form-control.input-lg(type='text' placeholder='Ingresa un usuario')
+        p.help-block
+      .form-group
+        label.control-label(for='email') Correo:
+        input#passcode.form-control.input-lg(type='email' placeholder='Ingresa un correo')
+        p.help-block
+      .checkbox.terms-checkbox
+        label
+          input#terms(type='checkbox')
+          |  Acepto los t&eacute;rminos y condiciones
+      .action.text-right
+        button.btn.btn-primary.btn-block.btn-lg(type='submit') Registrarse
+  .row.hidden
+    .col-sm-10.col-sm-offset-1
+      h1 Lista de Usuarios
+      table.table.bordered-table.table-striped
+        thead
+          tr
+            th.text-center Usuario Github
+            th.text-center Correo
+        tbody
+script(src='/javascripts/index.js')
+
